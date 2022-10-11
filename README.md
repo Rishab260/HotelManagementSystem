@@ -11,7 +11,8 @@ Entities:-
 How to run this project:-
 1) Download latest release
 2) Extract files
-3) Run .bat files in respective applications to launch the respective applications.
+3) Make a new folder C:\HotelData, and place database files auth.sqlite, menu.sqlite, orders.sqlite, feedback.sqlite here.
+4) Run .bat files in respective applications to launch the respective applications.
 
 Requirements:-
 1) Java 17 LTS
