@@ -3,8 +3,11 @@ import java.sql.SQLException;
 import java.util.Scanner;
 public class Main {
 
+
     public static void main(String[] g) throws SQLException {
+        DbHandler.connect();
         menu();
+
     }
 
     public static void menu() throws  SQLException
@@ -19,15 +22,24 @@ public class Main {
         if(order_or_admin == 'o')
         {
             // Display Menu and Take order
-            DbHandler.connect();
+
             out.println("Enter your table number");
             cid = scanner.nextInt();
             Order.readMenu(cid);
         }
-        else
+        else if(order_or_admin == 'a')
         {
-
-            //Launch Management Console
+            scanner.nextLine();
+            out.println("Enter username: ");
+            String username = scanner.nextLine();
+            out.println(("Enter password:"));
+            String password = scanner.nextLine();
+            String token = DbHandler.login(username,password);
+            Manager manager = new Manager(token);
+            manager.showManagementConsole();
+        }
+        else {
+            menu();
         }
     }
 }
