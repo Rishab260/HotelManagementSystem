@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="HotelChef">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Chef/HotelManagementChef/out/artifacts/HotelManagementChef_jar/HotelChef.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
