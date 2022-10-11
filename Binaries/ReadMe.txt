@@ -1,4 +1,4 @@
-************************************************************HOTEL MANAGEMENT SYSTEM version 1.0 (Console Only)***************************************************************************
+************************************************************HOTEL MANAGEMENT SYSTEM version 1.0 (Console Only)****************************************************************
 Author : Rishab CSE-B 25634
 GitHub Repo: https://github.com/Rishab260/HotelManagementSystem.git
 
