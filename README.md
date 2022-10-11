@@ -16,7 +16,7 @@ How to run this project:-
 Requirements:-
 1) Java 17 LTS
   
-*****************************************************HOTEL MANAGEMENT SYSTEM version 1.0 (Console Only)***********************************************************************
+         <h2>                                    HOTEL MANAGEMENT SYSTEM version 1.0 (Console Only)  </h2>
 Author : Rishab CSE-B 25634
 GitHub Repo: https://github.com/Rishab260/HotelManagementSystem.git
 
