@@ -70,19 +70,7 @@ public class DbHandler {
                 //Start account setup
                 createNewAccountFirstTime();
             }
-
-                /*String query1 = "SELECT * FROM accounts;";
-                Statement s1 = connection_auth.createStatement();
-                ResultSet set1 = s1.executeQuery(query1);
-                while(set1.next())
-                {
-                    tokens.add(set.getString("password"));
-                    out.println("Token is "+tokens.get(0));
-                }*/
               tokens = getToken();
-
-
-
         } catch (SQLException e) {
             out.println("Error connecting");
             e.printStackTrace();

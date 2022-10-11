@@ -44,7 +44,6 @@ public class Order {
                 message = scanner.nextLine();
                 DbHandler.insert_feedback(email,phoneno,groupsize,rating,message);
             }
-
             Main.menu();
         }
         else {

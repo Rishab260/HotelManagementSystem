@@ -5,8 +5,8 @@ public class Main {
 
 
     public static void main(String[] g) throws SQLException {
-        DbHandler.connect();
-        menu();
+        DbHandler.connect(); //Connect to sqlite database
+        menu(); //Show menu
 
     }
 
