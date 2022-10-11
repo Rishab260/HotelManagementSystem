@@ -71,14 +71,15 @@ public class DbHandler {
                 createNewAccountFirstTime();
             }
 
-                String query1 = "SELECT * FROM accounts;";
+                /*String query1 = "SELECT * FROM accounts;";
                 Statement s1 = connection_auth.createStatement();
                 ResultSet set1 = s1.executeQuery(query1);
                 while(set1.next())
                 {
                     tokens.add(set.getString("password"));
                     out.println("Token is "+tokens.get(0));
-                }
+                }*/
+              tokens = getToken();
 
 
 
@@ -298,7 +299,7 @@ public class DbHandler {
            String actualPassword = userExistsTable.getString("password");
            if(actualPassword.equals(password))
            {
-               out.println("Authentication Successful");
+               out.println("Authentication Successful... \nPress Enter to continue");
                return actualPassword;
            }
         }

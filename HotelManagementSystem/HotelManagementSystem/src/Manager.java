@@ -18,26 +18,33 @@ public class Manager {
 
     public void viewMenu() throws SQLException {
         DbHandler.db_read_menu();
+        this.showManagementConsole();
     }
 
     public void addItemToMenu(String itemName,float itemPrice) throws SQLException {
        DbHandler.insert_new_item(token,itemName,itemPrice);
+       this.showManagementConsole();
     }
 
     public void deleteItemFromMenu(String itemName) throws SQLException {
         DbHandler.delete_from_menu(token,itemName);
+        this.showManagementConsole();
     }
 
     public void deleteItemFromMenu(int itemSNo) throws SQLException {
         DbHandler.delete_from_menu(token,itemSNo);
+        this.showManagementConsole();
     }
 
     public void viewFeedback() throws SQLException {
         DbHandler.view_feedback();
+        this.showManagementConsole();
     }
 
     public void  showManagementConsole() throws SQLException {
+
         Scanner scanner = new Scanner(System.in);
+        out.println("Press Enter...");
         scanner.nextLine();
         String choice;
         out.println("----------------------Management Console----------------------");
@@ -65,6 +72,8 @@ public class Manager {
                 this.viewFeedback();
             default:
                 out.println("Enter a valid option (1 to 4)");
+                this.showManagementConsole();
+
         }
 
 
