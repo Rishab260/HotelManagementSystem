@@ -18,12 +18,6 @@ public class DbHandler {
     }
     public static void read_active_order() throws SQLException
     {
-        Scanner scanner = new Scanner(System.in);
-        char choice;
-
-        //System.out.print("\033[H\033[2J"); //clear screen
-        //System.out.flush();
-
         String query = "SELECT * FROM activeorders;";
         Statement s = connection_order.createStatement();
         ResultSet set = s.executeQuery(query);
@@ -35,15 +29,7 @@ public class DbHandler {
         {
             out.printf("%d \t| %s \t| %f%n",set.getInt("cid"),set.getString("placedorder"),set.getFloat("amount"));
         }
-       choice = scanner.next().charAt(0);
-
-        if(choice=='e')
-        {
             ChefConsole.console_menu();
-
-            return; //End function
-        }
-        // else do nothing
     }
     public static void remove_completed(int cid) throws SQLException {
         out.println("Processing cid = " +cid);

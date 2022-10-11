@@ -1,3 +1,4 @@
 Manifest-Version: 1.0
-Main-Class: Chef
+Main-Class: ChefConsole
+Class-Path: sqlite-jdbc-3.39.3.0.jar
 
