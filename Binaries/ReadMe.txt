@@ -19,7 +19,7 @@ Description:
   
 *License : GPL-3.0 license
 
-*Any contribution, criticism and suggestion is welcomed. 
+*Any contribution, criticism or suggestion is welcomed. 
 
 *Contact: rishab260@hotmail.com
           https://www.linkedin.com/in/rishab260/
