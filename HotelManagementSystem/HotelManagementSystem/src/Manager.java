@@ -48,7 +48,7 @@ public class Manager {
         scanner.nextLine();
         String choice;
         out.println("----------------------Management Console----------------------");
-        out.println("Menu:\n1. View Menu\n2. Add Item to menu\n3. Delete Item from menu\n4. View customer feedback");
+        out.println("Menu:\n1. View Menu\n2. Add Item to menu\n3. Delete Item from menu\n4. View customer feedback\n5. Main Menu");
         choice = scanner.nextLine();
 
         switch(choice)
@@ -70,6 +70,9 @@ public class Manager {
                 break;
             case "4":
                 this.viewFeedback();
+            case "5":
+                Main.menu();
+                break;
             default:
                 out.println("Enter a valid option (1 to 4)");
                 this.showManagementConsole();
