@@ -3,8 +3,6 @@ import java.util.Scanner;
 
 import static java.lang.System.out;
 public class Manager {
-
-
     private final String token;
 
     public Manager(String token)
