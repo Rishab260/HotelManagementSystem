@@ -42,7 +42,7 @@ public class Order {
                 rating = Float.parseFloat(scanner.nextLine());
                 out.println("Message: ");
                 message = scanner.nextLine();
-                DbHandler.insert_feedback(email,phoneno,groupsize,rating,message);
+                DbHandler.insert_feedback(email,phoneno,groupsize,rating,message, orderString);
             }
             Main.menu();
         }

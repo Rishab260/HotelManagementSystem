@@ -1,6 +1,7 @@
 import java.sql.SQLException;
 import java.util.Scanner;
 
+
 import static java.lang.System.out;
 public class Manager {
     private final String token;
@@ -39,6 +40,16 @@ public class Manager {
         this.showManagementConsole();
     }
 
+    public void feedbackAnalysis() throws SQLException {
+        if(!DbHandler.validator(token))
+        {
+            out.println("Invalid token");
+            return;
+        }
+
+        DbHandler.view_feedback_analysis();
+        this.showManagementConsole();
+    }
     public void  showManagementConsole() throws SQLException {
 
         Scanner scanner = new Scanner(System.in);
@@ -46,7 +57,7 @@ public class Manager {
         scanner.nextLine();
         String choice;
         out.println("----------------------Management Console----------------------");
-        out.println("Menu:\n1. View Menu\n2. Add Item to menu\n3. Delete Item from menu\n4. View customer feedback\n5. Main Menu");
+        out.println("Menu:\n1. View Menu\n2. Add Item to menu\n3. Delete Item from menu\n4. View customer feedback\n5. Feedback analysis\n6. Main menu");
         choice = scanner.nextLine();
 
         switch(choice)
@@ -69,10 +80,12 @@ public class Manager {
             case "4":
                 this.viewFeedback();
             case "5":
+                feedbackAnalysis();
+                break;
+            case "6":
                 Main.menu();
                 break;
             default:
-                out.println("Enter a valid option (1 to 4)");
                 this.showManagementConsole();
 
         }

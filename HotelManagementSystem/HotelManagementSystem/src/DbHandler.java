@@ -1,7 +1,6 @@
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 import java.util.Scanner;
 import java.math.BigInteger;
 import java.security.MessageDigest;
@@ -233,8 +232,8 @@ public class DbHandler {
         }
     }
 
-    public static void insert_feedback(String email, String phoneno, int groupsize, float rating, String message) throws SQLException {
-        String insertString = "INSERT INTO feedback VALUES(?,?,?,?,?)";
+    public static void insert_feedback(String email, String phoneno, int groupsize, float rating, String message, String orders) throws SQLException {
+        String insertString = "INSERT INTO feedback VALUES(?,?,?,?,?,?)";
 
         PreparedStatement psmt = connection_feedback.prepareStatement(insertString);
         psmt.setString(1, email);
@@ -242,6 +241,7 @@ public class DbHandler {
         psmt.setInt(3,groupsize);
         psmt.setFloat(4,rating);
         psmt.setString(5,message);
+        psmt.setString(6,orders);
         psmt.executeUpdate();
         out.println("Thank You for your valuable feedback");
     }
@@ -298,4 +298,37 @@ public class DbHandler {
         return password;
     }
 
+    public static int getLengthFeedback() throws SQLException {
+        String query = "SELECT count(*) as length FROM feedback;";
+        Statement s = connection_feedback.createStatement();
+        ResultSet set = s.executeQuery(query);
+
+        if(set.next())
+        {
+            return set.getInt("length");
+        }
+        else return 0;
+    }
+
+
+    public static void view_feedback_analysis() throws SQLException {
+        String query = "SELECT * FROM feedback;";
+        Statement s = connection_feedback.createStatement();
+        ResultSet set = s.executeQuery(query);
+
+        SentimentAnalyzer.init(new String[] {"annotators", "tokenize, ssplit, parse, sentiment"});
+        int length = DbHandler.getLengthFeedback();
+        int[] messageValue = new int[length];
+        out.println("email \t| phone no \t| groupsize \t| rating \t| orders \t| sentiment Name \t| sentiment Value \t| sentence");
+        for(int i = 0; i < length; i++)
+        {
+            set.next();
+            out.print(set.getString("email")+"\t|");
+            out.print(set.getString("phoneno")+"\t|");
+            out.print(set.getString("groupsize")+"\t|");
+            out.print(set.getString("rating")+"\t|");
+            out.print(set.getString("orders")+"\t|");
+            SentimentAnalyzer.predictSentiment(set.getString("message"));
+        }
+    }
 }

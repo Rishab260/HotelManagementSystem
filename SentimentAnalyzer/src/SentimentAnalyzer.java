@@ -9,13 +9,13 @@ import edu.stanford.nlp.trees.Tree;
 import edu.stanford.nlp.util.CoreMap;
 public class SentimentAnalyzer {
     static StanfordCoreNLP pipeline;
-    public SentimentAnalyzer(String[] analyzerProperties)
+    public static void init(String[] analyzerProperties)
     {
         
         Properties properties = new Properties();
         String key = analyzerProperties[0];
         String value = analyzerProperties[1];
-        //"annotators", "tokenize, ssplit, parse, sentiment"
+
         properties.setProperty(key,value);
         pipeline = new StanfordCoreNLP(properties);
     }
@@ -29,7 +29,7 @@ public class SentimentAnalyzer {
             Tree tree = sentence.get(SentimentAnnotatedTree.class);
             sentimentValue = RNNCoreAnnotations.getPredictedClass(tree);
             sentimentName = sentence.get(SentimentCoreAnnotations.SentimentClass.class);
-            System.out.println(sentimentName + "\t" + sentimentValue + "\t" + sentence);
+            System.out.println(sentimentName + "\t|" + sentimentValue + "\t|" + sentence);
         }
     }
 }
