@@ -1,4 +1,6 @@
 Manifest-Version: 1.0
 Main-Class: Main
-Class-Path: sqlite-jdbc-3.39.3.0.jar
+Class-Path: sqlite-jdbc-3.39.3.0.jar ejml-core-0.39.jar ejml-ddense-0.39
+ .jar ejml-simple-0.39.jar SentimentAnalysis.jar stanford-corenlp-4.5.1.
+ jar stanford-corenlp-4.5.1-models.jar
 

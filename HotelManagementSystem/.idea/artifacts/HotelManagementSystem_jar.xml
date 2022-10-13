@@ -6,6 +6,12 @@
         <element id="module-output" name="HotelManagementSystem" />
       </element>
       <element id="file-copy" path="$PROJECT_DIR$/HotelManagementSystem/sqlite-jdbc-3.39.3.0.jar" />
+      <element id="file-copy" path="$PROJECT_DIR$/../SentimentAnalyzer/out/artifacts/SentimentAnalysis_jar/ejml-core-0.39.jar" />
+      <element id="file-copy" path="$PROJECT_DIR$/../SentimentAnalyzer/out/artifacts/SentimentAnalysis_jar/ejml-ddense-0.39.jar" />
+      <element id="file-copy" path="$PROJECT_DIR$/../SentimentAnalyzer/out/artifacts/SentimentAnalysis_jar/ejml-simple-0.39.jar" />
+      <element id="file-copy" path="$PROJECT_DIR$/../SentimentAnalyzer/out/artifacts/SentimentAnalysis_jar/SentimentAnalysis.jar" />
+      <element id="file-copy" path="$PROJECT_DIR$/../SentimentAnalyzer/out/artifacts/SentimentAnalysis_jar/stanford-corenlp-4.5.1.jar" />
+      <element id="file-copy" path="$PROJECT_DIR$/../SentimentAnalyzer/out/artifacts/SentimentAnalysis_jar/stanford-corenlp-4.5.1-models.jar" />
     </root>
   </artifact>
 </component>
