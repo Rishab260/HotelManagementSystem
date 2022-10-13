@@ -1,9 +1,0 @@
-This application makes use of the following JARs from Stanford Core-NLP :-
-
-ejml-core-0.39.jar
-ejml-ddense-0.39.jar
-ejml-simple-0.39.jar
-stanford-corenlp-4.5.1.jar
-stanford-corenlp-4.5.1-models.jar
-
-Please download the stanford coreNLP version 4.5.1 and place the above mentioned JARs in the folder containing SentimentAnalysis.jar
