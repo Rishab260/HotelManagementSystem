@@ -42,7 +42,4 @@ Description:
 
 *Contact: rishab260@hotmail.com
           https://www.linkedin.com/in/rishab260/
-
-
-</p>![ProjectWorkflow](https://user-images.githubusercontent.com/90474550/200286491-4442bf54-a652-4a14-8e1d-5b1cbbd6b5a8.jpg)
-
+</p>
