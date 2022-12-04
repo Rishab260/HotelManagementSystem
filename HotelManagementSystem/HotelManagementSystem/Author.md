@@ -1,3 +1,0 @@
-Rishab 
-25634
-CSE-B
