@@ -1,7 +1,7 @@
 <h1> HotelManagementSystem </h1>
 <h2> Hotel Management System - Core Java Project </h2>
 <p>
-HotelManagementSystem project uses Java and Sqlite. It's a console app in its first version. I plan on adding a JavaFX or Swing GUI in future. 
+HotelManagementSystem project uses Java and Sqlite. It's a console app in its first version. There are 3 version available kindly check the 3 braches - 1.0.0, 2.0.0, 3.0.0.
 
 Entities:-
 1) Customer - Places Order, Recieves Bill Amount and Gives Feedback.
